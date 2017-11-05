@@ -1,10 +1,10 @@
 <content-header name="Dashboard" small="Versão 1.0"></content-header>
 
-<section class="content">
-    <content grid="4" valor="R$ 10,00" tipo-conta="Total de Crédito" color="bg-green" 
+<section class="content" ng-controller="dashboardControl as ctrl">
+    <content grid="4" valor="R$ {{ ctrl.credito | number:2}}" tipo-conta="Total de Crédito" color="bg-green" 
             icone="fa fa-bank"></content>
-    <content grid="4" valor="R$ 10,00" tipo-conta="Total de Débito" color="bg-red" 
+    <content grid="4" valor="R$ {{ ctrl.debito | number:2}}" tipo-conta="Total de Débito" color="bg-red" 
             icone="fa fa-credit-card"></content>
-    <content grid="4" valor="R$ 0,00" tipo-conta="Total Consolidado" color="bg-blue" 
+    <content grid="4" valor="R$ {{ ctrl.total | number:2}}" tipo-conta="Total Consolidado" color="bg-blue" 
             icone="fa fa-money"></content>    
 </section>
