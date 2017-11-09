@@ -7,6 +7,7 @@
       input:'@',
       type: '@',
       model:'=',
+      readonly:'<',
     },
     controller: [
       'myFactory',
@@ -25,7 +26,7 @@
     <label for="{{ $ctrl.input }}">{{ $ctrl.for }}</label>
     <input id="{{ $ctrl.input }}" class="form-control" 
     type="{{ $ctrl.type }}" placeholder="Informe o {{ $ctrl.for }}"
-    ng-model= "$ctrl.model"/>
+    ng-model= "$ctrl.model" ng-readonly ="$ctrl.readonly" />
     </div>
     </div>
     `

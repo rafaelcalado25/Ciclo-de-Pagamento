@@ -3,32 +3,40 @@
 <section class="content" >
   <div class="nav-tabs-custom" ng-controller="billingCycleController as ctrl">
     <ul class="nav nav-tabs">
-      <li>
-        <a href data-target="#tabList" data-toggle="tab">
+      <li ng-if="ctrl.tabList">
+        <a href data-target="#tabList" data-toggle="tab"
+        ng-class="{active:ctrl.tabList}">
           <i class="fa fa-bars"></i>Lista
         </a>
       </li>
-      <li>
-        <a href data-target="#tabcreate" data-toggle="tab">
+      <li ng-if="ctrl.tabCreate">
+        <a href data-target="#tabcreate" data-toggle="tab"
+        ng-class="{active:ctrl.tabCreate}">
           <i class="fa fa-plus"></i>Incluir
         </a>
       </li>
-      <li>
-        <a href data-target="#tabupdate" data-toggle="tab">
+      <li ng-if="ctrl.tabUpdate">
+        <a href data-target="#tabupdate" data-toggle="tab" 
+          ng-class="{active:ctrl.tabUpdate}">
           <i class="fa fa-pencil"></i>Atualizar
         </a>
       </li>
-      <li>
-        <a href data-target="#tabdelete" data-toggle="tab">
+      <li ng-if="ctrl.tabDelete">
+        <a href data-target="#tabdelete" data-toggle="tab"
+        ng-class="{active:ctrl.tabDelete}">
           <i class="fa fa-trash-o"></i>Excluir
         </a>
       </li>
     </ul>
     <div class="tab-content">
-      <div class="tab-pane" id="tabList" ng-include="'billingCycle/list.html'"></div>
-      <div class="tab-pane" id="tabcreate" ng-include="'billingCycle/form.html'"></div>
-      <div class="tab-pane" id="tabupdate" ng-include="'billingCycle/form.html'"></div>
-      <div class="tab-pane" id="tabdelete" ng-include="'billingCycle/form.html'"></div>
+      <div class="tab-pane" id="tabList" ng-include="'billingCycle/list.html'"
+      ng-if="ctrl.tabList" ng-class="{active:ctrl.tabList}"></div>
+      <div class="tab-pane" id="tabcreate" ng-include="'billingCycle/form.html'"
+      ng-if="ctrl.tabCreate" ng-class="{active:ctrl.tabCreate}"></div>
+      <div class="tab-pane" id="tabupdate" ng-include="'billingCycle/form.html'"
+      ng-if="ctrl.tabUpdate" ng-class="{active:ctrl.tabUpdate}"></div>
+      <div class="tab-pane" id="tabdelete" ng-include="'billingCycle/form.html'"
+      ng-if="ctrl.tabDelete" ng-class="{active:ctrl.tabDelete}"></div>
     </div>
   </div>
 </section>
