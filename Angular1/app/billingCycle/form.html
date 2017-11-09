@@ -1,0 +1,16 @@
+<div role="form">
+  <div class="box-body">
+    <campo-form grid="12 6 4" group="form-group" for="Nome" input="nome"
+    model="ctrl.billingCycle.nome"></campo-form>
+    <campo-form grid="12 6 4" group="form-group" for="Mês" input="mes" 
+    type="number" model="ctrl.billingCycle.mes"></campo-form>
+    <campo-form grid="12 6 4" group="form-group" for="Ano" input="ano" 
+    type="number" model="ctrl.billingCycle.ano"></campo-form>
+  </div>
+  <div class="box-footer">
+    <button class="btn btn-primary" ng-click="ctrl.create()">Incluir</button>
+    <button class="btn btn-info">Alterar</button>
+    <button class="btn btn-danger">Excluir</button>
+    <button class="btn btn-default">Cancelar</button>
+  </div>
+</div>

@@ -1,13 +1,34 @@
 <content-header name="Ciclo de Pagamento" small="Cadastro"></content-header>
 
-<section class="content">
-  <div class="nav-tabs-custom">
+<section class="content" >
+  <div class="nav-tabs-custom" ng-controller="billingCycleController as ctrl">
     <ul class="nav nav-tabs">
       <li>
-        <a href data-target="#tablist" data-toggle="tab">
+        <a href data-target="#tabList" data-toggle="tab">
           <i class="fa fa-bars"></i>Lista
         </a>
       </li>
+      <li>
+        <a href data-target="#tabcreate" data-toggle="tab">
+          <i class="fa fa-plus"></i>Incluir
+        </a>
+      </li>
+      <li>
+        <a href data-target="#tabupdate" data-toggle="tab">
+          <i class="fa fa-pencil"></i>Atualizar
+        </a>
+      </li>
+      <li>
+        <a href data-target="#tabdelete" data-toggle="tab">
+          <i class="fa fa-trash-o"></i>Excluir
+        </a>
+      </li>
     </ul>
+    <div class="tab-content">
+      <div class="tab-pane" id="tabList" ng-include="'billingCycle/list.html'"></div>
+      <div class="tab-pane" id="tabcreate" ng-include="'billingCycle/form.html'"></div>
+      <div class="tab-pane" id="tabupdate" ng-include="'billingCycle/form.html'"></div>
+      <div class="tab-pane" id="tabdelete" ng-include="'billingCycle/form.html'"></div>
+    </div>
   </div>
 </section>
