@@ -14,8 +14,7 @@ angular.module('MinhaApp').controller('dashboardControl', [
         m.credito = credito
         m.debito = debito
         m.total = credito - debito
-        console.log(m.credito);
-
+        
         return m
       })
     }

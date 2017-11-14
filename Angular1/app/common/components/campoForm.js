@@ -17,7 +17,7 @@
         //Para funcionar temos que fazer o código abaixo que sicroniza
         //a passagem de parametro com a inicialização do component
         this.$onInit = () => this.gridClasses = myFactory.toCssClasses(this.grid); 
-        console.log(this.gridClasses)          
+                 
       },
     ],
     template: `

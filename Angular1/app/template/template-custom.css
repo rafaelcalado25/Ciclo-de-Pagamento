@@ -1,5 +1,5 @@
 html { background-color: #ecf0f5}
-.main-footer {position:fixed; bottom: 0px; width: 100%;}
+/* .main-footer {position:fixed; bottom: 0px; width: 100%;} */
 .sidebar-menu .treeview .treeview-menu {
   display: block; // remove this will show all sub menus
   list-style: none;
